@@ -4,4 +4,4 @@
 Этот репозиторий является каркасом для будущего веб-приложения.
 
 ## Ссылки
-- [Публичная страница на GitHub Pages](https://aplaygs.github.io/frontback/)
+- [Публичная страница на GitHub Pages](https://aplaygs.github.io/frontback/src/index.html)
