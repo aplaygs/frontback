@@ -42,3 +42,10 @@ form?.addEventListener('submit', (e) => { //если форма существу
 });
 
 dlg.addEventListener('close', () => { lastActive?.focus(); });
+
+
+// Ограничение ввода только цифр в поле телефона
+var phoneInput = document.getElementById('phone');
+phoneInput.addEventListener('input', function() {
+  phoneInput.value = phoneInput.value.replace(/[^0-9]/g, ''); // Удаляем всё кроме цифр
+});
