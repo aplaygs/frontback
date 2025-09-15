@@ -6,24 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>О нас - Мой сайт</title>
     <meta name="description" content="Узнайте больше о нашей компании и истории">
-    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="icon" href="../assets/favicon.ico" type="image/jpeg">
+    <link rel="stylesheet" href="../styles/styles.css"> <!-- Подключение CSS: общий файл стилей для всех страниц; путь скорректирован -->
 </head>
 
 <body>
+    <!-- Шапка сайта: содержит логотип и основную навигацию по БЭМ; активный пункт подсвечен -->
     <header class="site-header">
-        <a class="site-header__brand" href="/src/about.html">О нас</a>
+        <a class="site-header__brand" href="index.html">О нас</a> <!-- Исправил href на главную для consistency; бренд как название страницы -->
         <nav class="site-nav" aria-label="Основная навигация">
             <ul class="site-nav__list">
                 <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
-                <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="about.html">О нас</a>
-                </li>
-                <li class="site-nav__item"><a class="site-nav__link site-nav__link--cta"
-                        href="contacts.html">Контакты</a></li>
+                <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="about.html">О нас</a></li>
+                <li class="site-nav__item"><a class="site-nav__link site-nav__link--cta" href="contacts.html">Контакты</a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- Основной контент: включает breadcrumbs для навигации и секции с информацией о компании -->
     <main>
-        <!-- Простые "хлебные крошки" -->
+        <!-- Простые "хлебные крошки": БЭМ-структура для навигации по страницам; текущий пункт не ссылка -->
         <nav class="breadcrumbs" aria-label="Хлебные крошки">
             <ul class="breadcrumbs__list">
                 <li class="breadcrumbs__item">
@@ -34,16 +36,23 @@
                 </li>
             </ul>
         </nav>
+
         <h1>О нашей компании</h1>
+
+        <!-- Секция истории: базовая информация с заголовком и текстом -->
         <section>
             <h2>Наша история</h2>
             <p>Текст о том, как все начиналось...</p>
         </section>
+
+        <!-- Секция команды: базовая информация с заголовком и текстом -->
         <section>
             <h2>Наша команда</h2>
             <p>Текст о команде...</p>
         </section>
     </main>
+
+    <!-- Подвал сайта: копирайт и контакты; consistency с index.html и contacts.html -->
     <footer>
         <p>&copy; 2025 Название вашего сайта. Все права защищены.</p>
         <p>Телефон: +7 (123) 456-78-90</p>

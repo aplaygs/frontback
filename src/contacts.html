@@ -6,24 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты - Мой первый проект</title>
     <meta name="description" content="Контактная информация и форма обратной связи">
-    <link rel="icon" href="../assets/favicon.jpeg" type="image/jpeg"> <!-- Если есть .ico, замени -->
-    <link rel="stylesheet" href="../styles/styles.css"> <!-- Подключение CSS -->
-    <script src="/main.js" defer></script> <!-- Подключение JS -->
+    <link rel="icon" href="../assets/favicon.ico" type="image/jpeg">
+    <link rel="stylesheet" href="../styles/styles.css"> <!-- Подключение CSS: общий файл стилей для всех страниц -->
+    <script src="../main.js" defer></script>
+    <!-- Подключение JS: defer для отложенной загрузки; путь скорректирован, если main.js в корне -->
 </head>
 
 <body>
+    <!-- Шапка сайта: содержит логотип и основную навигацию по БЭМ; активный пункт подсвечен -->
     <header class="site-header">
-        <a class="site-header__brand" href="/src/contacts.html">Контакты</a>
+        <a class="site-header__brand" href="index.html">Контакты</a>
+        <!-- Исправил href на главную для consistency; бренд как название страницы -->
         <nav class="site-nav" aria-label="Основная навигация">
             <ul class="site-nav__list">
                 <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
                 <li class="site-nav__item"><a class="site-nav__link" href="about.html">О нас</a></li>
-                <li class="site-nav__item"><a class="site-nav__link site-nav__link--active"
-                        href="contacts.html">Контакты</a></li>
+                <li class="site-nav__item"><a class="site-nav__link site-nav__link--active site-nav__link--cta"
+                        href="contacts.html">Контакты</a></li> <!-- Добавил --cta для выделения, как в задании -->
             </ul>
         </nav>
     </header>
 
+    <!-- Основной контент: включает breadcrumbs для навигации и секции с контактами -->
     <main>
         <nav class="breadcrumbs" aria-label="Хлебные крошки">
             <ul class="breadcrumbs__list">
@@ -35,19 +39,25 @@
                 </li>
             </ul>
         </nav>
+
         <h1>Контакты</h1>
+
+        <!-- Секция социальных сетей: простая информация без форм -->
         <section>
             <h2>Социальные сети</h2>
             <p>Telegram...</p>
         </section>
+
+        <!-- Секция адреса: базовая контактная информация -->
         <section>
             <h2>Адрес компании</h2>
             <p>Адрес...</p>
         </section>
 
-        <!-- Кнопка для открытия формы -->
+        <!-- Кнопка для открытия модальной формы: запускает JS для показа dialog -->
         <button id="openDialog" class="form__open-btn" type="button">Написать нам</button>
 
+        <!-- Модальное окно с формой: использует <dialog> для доступности; стили по БЭМ; JS обрабатывает открытие/закрытие и валидацию -->
         <dialog id="contactDialog" class="modal">
             <form id="contactForm" class="form" novalidate>
                 <label class="form__label" for="email">E-mail</label>
@@ -75,13 +85,6 @@
                 </div>
             </form>
         </dialog>
-
     </main>
 
-    <footer>
-        <p>&copy; 2025 Мой первый проект. Все права защищены.</p>
-        <p>Телефон: +7 (123) 456-78-90</p>
-    </footer>
-</body>
-
-</html>
+    <!-- Подвал сайта: копирайт и контакты; consistency
